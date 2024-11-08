@@ -1,0 +1,25 @@
+/*********************/
+/* BELOW 1312PX (smaller desktop) */
+/*********************/
+
+@media (max-width: 82em) {
+  .hero {
+    max-width: 128rem;
+  }
+
+  .header-primary {
+    font-size: 4.4rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+  }
+
+  .testimonial-box {
+    overflow: hidden;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
