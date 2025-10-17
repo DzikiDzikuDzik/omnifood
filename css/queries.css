@@ -51,7 +51,7 @@
   }
 
   .how-section {
-    padding: 9.4rem 6.4rem 6.4rem;
+    padding: 9.4rem 4.8rem 6.4rem;
   }
 
   .section-meals {
@@ -59,7 +59,7 @@
   }
 
   .meal-name {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .meal-attribute span {
@@ -102,6 +102,7 @@
   }
 
   .pricing-option--complete::after {
+    font-size: 1.2rem;
     top: 7%;
     right: -24%;
   }
@@ -151,5 +152,377 @@
 
   .list-item-footer {
     font-size: 1.4rem;
+  }
+
+  .footer {
+    padding: 2.4rem;
+  }
+
+  .address,
+  .copyright {
+    font-size: 1.2rem;
+  }
+
+  .nav-col {
+    grid-row: 1;
+  }
+}
+
+/*************************/
+/* BELOW 912PX (tablets) */
+/*************************/
+
+@media (max-width: 57rem) {
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .main-nav {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide the navigation */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    /* right: calc(0px - 100vw); */
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .hero-section .grid--2--columns {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-delivered-meals {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .heading-featured-in {
+    font-size: 1.4rem;
+  }
+
+  .logos img {
+    height: 1.6rem;
+  }
+
+  .hero-img-box {
+    width: 60%;
+    margin: auto;
+  }
+
+  .how-section {
+    padding: 6.4rem 1.4rem;
+  }
+
+  .step-number {
+    font-size: 6.4rem;
+  }
+
+  .heading-secondary {
+    margin-bottom: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .section-meals {
+    padding: 1.4rem;
+  }
+
+  .meal-info {
+    padding: 2.4rem;
+  }
+
+  .meal-name {
+    font-size: 1.6rem;
+  }
+
+  .meal-attribute span {
+    font-size: 1.3rem;
+  }
+
+  .testimonials-container {
+    padding: 6.4rem 4.8rem;
+  }
+
+  .testimonial {
+    padding: 0 1.6rem;
+  }
+
+  .pricing-name {
+    font-size: 2.4rem;
+  }
+
+  .price {
+    font-size: 4.2rem;
+  }
+
+  .currency {
+    font-size: 2.4rem;
+  }
+
+  .pricing-option {
+    width: 100%;
+  }
+
+  .pricing-option--complete::after {
+    content: "best";
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 1rem 6.4rem;
+    text-align: center;
+    font-weight: 800;
+    position: absolute;
+    top: 4%;
+    right: -18%;
+    transform: rotate(45deg);
+  }
+
+  .list-item {
+    font-size: 1.6rem;
+  }
+
+  .cta {
+    grid-template-columns: 3fr 2fr;
+    gap: 0;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*************************/
+/* BELOW 752PX (tablets) */
+/*************************/
+
+@media (max-width: 49rem) {
+  .grid--3--columns,
+  .grid--4--columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--4--columns {
+    row-gap: 2.4rem;
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+/*************************/
+/* BELOW 480PX (S phone) */
+/*************************/
+
+@media (max-width: 30rem) {
+  .header-primary {
+    font-size: 2.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.4rem;
+  }
+
+  .heading-tertiary {
+    font-size: 1.8rem;
+  }
+
+  .grid--2--columns,
+  .grid--3--columns,
+  .grid--4--columns {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  .logo {
+    height: 1.4rem;
+  }
+
+  .icon-mobile-nav {
+    height: 3.6rem;
+  }
+
+  .hero-section {
+    padding: 2.4rem;
+  }
+
+  .btn:link,
+  .btn:visited {
+    height: 4.8rem;
+    width: 16rem;
+    padding: 1.6rem 0rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+
+  .margin-right-small {
+    margin-right: 0rem !important;
+  }
+
+  .featured-in {
+    padding-top: 2.4rem;
+  }
+
+  .heading-featured-in {
+    font-size: 1.2rem;
+  }
+
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    column-gap: 1rem;
+  }
+
+  .logos img {
+    height: 1rem;
+  }
+
+  .how-section {
+    padding: 4.8rem 1.2rem;
+  }
+
+  .how-section-grid {
+    padding: 2.4rem 0;
+    row-gap: 3.6rem;
+  }
+
+  .step-img-box {
+    width: 60%;
+    transform: translateY(1.6rem);
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .testimonials-container {
+    padding: 4.8rem 1.6rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section-pricing {
+    padding: 4.8rem 4.8rem;
+  }
+
+  .pricing-option--complete::after {
+    content: "best value";
+    top: 6%;
+    right: -20%;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    border-radius: 0;
+  }
+
+  .cta-container {
+    padding: 0;
+  }
+
+  .cta-content-box {
+    padding: 3.6rem 1.8rem;
+  }
+
+  .cta-img-box {
+    grid-row: 1;
+    height: 30rem;
+  }
+
+  .footer {
+    margin-top: 2.4rem;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 2.4rem 1.2rem;
+    margin-bottom: 2.4rem;
+    column-gap: 0;
+    grid-row: 2.4rem;
+  }
+
+  .footer-col:nth-child(1) {
+    grid-column: 1 / 5;
+  }
+
+  .footer-col:nth-child(2) {
+    grid-column: 6 / -1;
+  }
+
+  .nav-col:nth-child(3) {
+    grid-column: 1 / 3;
+  }
+
+  .nav-col:nth-child(4) {
+    grid-column: 4 / 7;
+  }
+
+  .nav-col:nth-child(5) {
+    grid-column: 7 / -1;
+  }
+
+  .address,
+  .copyright {
+    font-size: 1rem;
+  }
+
+  .socialmedia-col {
+    gap: 1.6rem;
+  }
+
+  .address {
+    gap: 1rem;
+  }
+
+  .list-item-footer {
+    font-size: 1.2rem;
+  }
+
+  .list-item-flex {
+    gap: 0.1rem;
   }
 }

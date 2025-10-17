@@ -47,6 +47,8 @@ Spacing system (px)
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -54,6 +56,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #333;
+  overflow-x: hidden;
 }
 
 /* =========================== */
@@ -164,7 +167,7 @@ body {
 }
 
 .grid--5--columns {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 2fr);
 }
 
 strong {
@@ -195,11 +198,55 @@ strong {
   box-shadow: 0 0 0 0.6rem #cf711f;
 }
 
+/* =============== */
+/* ==== PHONE ==== */
+/* =============== */
+
+.btn-mobile-nav {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+  display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+  display: none;
+}
+
+/* ion-icon[name="menu-outline"],
+ion-icon[name="close-outline"] {
+  border: none;
+  background-color: transparent;
+  font-size: 2.4rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+} */
+
 /* ============== */
 /* === HEADER === */
 /* ============== */
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

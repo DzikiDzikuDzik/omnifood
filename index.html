@@ -13,7 +13,16 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script defer src="scripts/script.js"></script>
+
+
+
   </head>
+
   <body>
     <header class="header">
       <a href="#">
@@ -25,14 +34,18 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Start eating well</a></li>
-          <li><a class="main-nav-link" href="#">How it works</a></li>
-          <li><a class="main-nav-link" href="#">Meals</a></li>
-          <li><a class="main-nav-link" href="#">Testimonials</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Buy now</a></li>
+          <li><a class="main-nav-link" href="#how-section">How it works</a></li>
+          <li><a class="main-nav-link" href="#section-meals">Meals</a></li>
+          <li><a class="main-nav-link" href="#section-testimonials">Testimonials</a></li>
+          <li><a class="main-nav-link" href="#section-pricing">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#section-cta">Buy now</a></li>
         </ul>
       </nav>
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline" ></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+      
     </header>
     <main>
       <!-- HERO SECTION -->
@@ -77,6 +90,7 @@
           </div>
         </div>
       </section>
+
       <!-- FEATURES-IN SECTION -->
       <section class="featured-in container">
         <h2 class="heading-featured-in">As featured in</h2>
@@ -96,7 +110,7 @@
       </section>
 
       <!-- HOW TO SECTION-->
-      <section class="how-section">
+      <section class="how-section" id="how-section">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -104,7 +118,7 @@
           </h2>
         </div>
 
-        <div class="container grid grid--2--columns grid--center--verticaly">
+        <div class="how-section-grid container grid grid--2--columns grid--center--verticaly">
           <div class="container step-text-box">
             <!-- STEP 01-->
             <p class="step-number">01</p>
@@ -127,9 +141,9 @@
           </div>
 
           <!-- STEP 02 -->
-          <div class="step-img-box">
+          <div class="step-img-box img-flip">
             <img
-              class="step-img"
+              class="step-img "
               src="img/app/app-screen-2.png"
               alt="meal approving plan"
             />
@@ -165,7 +179,7 @@
       </section>
 
       <!-- MEALS SECTION -->
-      <section class="section-meals">
+      <section class="section-meals" id="section-meals">
         <div class="container">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -275,7 +289,7 @@
 
       <!-- TESTIMONIAL SECTION -->
 
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="section-testimonials">
         <div class="testimonials-box">
           <div class="testimonials-container">
             <span class="subheading">Testimonials</span>
@@ -429,7 +443,7 @@
 
       <!-- PRICING SECTION -->
 
-      <section class="section-pricing container">
+      <section class="section-pricing container" id="section-pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -534,7 +548,7 @@
 
       <!-- Call to action Section-->
 
-      <section class="container">
+      <section class="container cta-container" id="section-cta">
         <div class="cta grid">
           <div class="cta-content-box">
             <p class="cta-heading">Get your first meal for free!</p>
@@ -581,14 +595,6 @@
           <div class="cta-img-box" role="img" aria></div>
         </div>
       </section>
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-      ></script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-      ></script>
     </main>
     <bottom class="section-footer">
       <div class="container grid grid--5--columns footer">
@@ -621,7 +627,7 @@
             ></a>
           </div>
           <p class="copyright">
-            Copyright &copy; 2024 by Omnifood. Inc. All rights reserved
+            Copyright &copy; <span class="year">2014</span> by Omnifood. Inc. All rights reserved
           </p>
         </div>
         <div class="footer-col">
@@ -632,21 +638,21 @@
              <a class="list-item-flex" href="mailto:"><ion-icon name="mail-outline"></ion-icon>hello@omnifood.com</a>
           </address>
         </div>
-        <div class="footer-col">
+        <div class="footer-col nav-col">
           <p class="footer-heading">Account</p>
           <a class="list-item-footer" href="#">Create account</a>
           <a class="list-item-footer" href="#">Sign in</p>
           <a class="list-item-footer" href="#">iOS app</a>
           <a class="list-item-footer" href="#">Android app</a>
         </div>
-        <div class="footer-col">
+        <div class="footer-col nav-col">
           <p class="footer-heading">Company</p>
           <a class="list-item-footer" href="#">About omnifood</a>
           <a class="list-item-footer" href="#">For business</p>
           <a class="list-item-footer" href="#">Cooking partners</a>
           <a class="list-item-footer" href="#">Careers</a>
         </div>
-        <div class="footer-col">
+        <div class="footer-col nav-col">
           <p class="footer-heading">Resources</p>
           <a class="list-item-footer" href="#">Recipe directory</a>
           <a class="list-item-footer" href="#">Help center</p>
